@@ -45,7 +45,7 @@ class Dial:
     value: int
     maximum: int
 
-    def __init__(self, value: int, maximum: Direction):
+    def __init__(self, value: int, maximum: int):
         self.value = value
         self.maximum = maximum
 
@@ -55,7 +55,7 @@ class Dial:
 
 
 def main():
-    dial = Dial(DIAL_MAX / 2, DIAL_MAX)
+    dial = Dial(int(DIAL_MAX / 2), DIAL_MAX)
     nrOfZeros = 0
 
     with open(INPUT_FILE, "r") as file:

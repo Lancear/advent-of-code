@@ -2,7 +2,7 @@ INPUT_FILE = "./day-4-input.txt"
 
 
 class Diagram:
-    def __init__(self, rows: list[list[chr]]):
+    def __init__(self, rows: list[list[str]]):
         self.rows = rows
         self.rowCount = len(self.rows)
         self.colCount = len(self.rows[0]) if self.rowCount > 0 else 0

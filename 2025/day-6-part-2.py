@@ -3,7 +3,7 @@ INPUT_FILE = "./day-6-input.txt"
 
 class Problem:
     def __init__(self, initialValue: int):
-        self.result = initialValue
+        self.result: int = initialValue
 
     def calculate(self, num: int):
         return self.result

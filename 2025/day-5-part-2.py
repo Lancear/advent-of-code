@@ -54,9 +54,11 @@ class IdRanges:
 
     def append(self, idRange: IdRange):
         for exisitingRange in self.ranges:
-            if exisitingRange.overlaps(idRange):
+            overlappingRange = exisitingRange.merge(idRange)
+
+            if overlappingRange is not None:
                 self.remove(exisitingRange)
-                self.append(exisitingRange.merge(idRange))
+                self.append(overlappingRange)
                 return
 
         self.ranges.append(idRange)
